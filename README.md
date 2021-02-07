@@ -28,7 +28,9 @@ Enable the camera by going to `Interface Options` and choosing option `P1 Camera
 sudo raspi-config
 ```
 
-Enable VNC (if you are not using the PI as a desktop). **Remmina** is a good Linux based VNC Client.
+## VNC (headless)
+
+Enable VNC (if you are not using the PI as a desktop).
 
 ```
 sudo apt install -y tightvncserver
@@ -40,7 +42,13 @@ Run the VNC server after you log in with `ssh`. The first time you run the serve
 vncserver :1
 ```
 
-Then connect using RPI-IP-ADDRESS:5901 and entering the password you configured just previously.
+Then connect using RPI-IP-ADDRESS:5901 and entering the password you
+configured just previously. If you do not know your ip addres, you can run
+`ifconfig` at the command line.
+
+## VNC Client (headless)
+
+**Remmina** is a good Linux based VNC Client. **TightCNV** is a free VNC that also works on Windows. On macOS, you can follow the instructions at <https://raspberrypi.stackexchange.com/questions/59605/access-to-raspberry-pi-vnc-session-from-mac-os-x>.
 
 ## Configure Python 3
 
